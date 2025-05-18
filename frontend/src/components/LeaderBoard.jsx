@@ -26,7 +26,7 @@ export default function Leaderboard() {
   const fetchLeaderboardData = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/user/get-all-teams');
+      const response = await fetch('https://leaderboard-backend-16d3.onrender.com/user/get-all-teams');
       if (!response.ok) throw new Error('Failed to fetch leaderboard data');
       
       const data = await response.json();
